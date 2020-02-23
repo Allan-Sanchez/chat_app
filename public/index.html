@@ -14,47 +14,64 @@
                 <h1 class="uppercase text-6xl font-bold text-teal-400">chat app</h1>
             </div>
 
-            <div class="bg-teal-100 border border-teal-400 text-teal-700 px-4 py-3 rounded relative" role="alert">
-                <strong class="font-bold">User name!</strong>
-                <span class="block sm:inline">Init seccion.</span>
-                <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
-                  <svg class="fill-current h-6 w-6 text-teal-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
-                </span>
+            <!-- alert new user -->
+            <div class="alertChat" id="alertChat">
+              
             </div>
 
-            <div class="bg-teal-200 border-t-4 border-teal-800  rounded-b text-teal-darkest px-4 py-3 shadow-md my-2" role="alert">
-                <div class="flex">
-                  <svg class="h-6 w-6 text-teal mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg>
-                  <div>
-                    <p class="font-bold">No hay mensajes</p>
-                    <!-- <p class="text-sm">Make sure you know how these changes affect you.</p> -->
+            <!-- not message -->
+            <div class="notMessage" id="notMessage">
+              <div class="bg-teal-200 border-t-4 border-teal-800  rounded-b text-teal-darkest px-4 py-3 shadow-md my-2" role="alert">
+                  <div class="flex">
+                    <svg class="h-6 w-6 text-teal mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z"/></svg>
+                    <div>
+                      <p class="font-bold">No hay mensajes</p>
+                    </div>
                   </div>
-                </div>
+              </div>
             </div>
 
+            <!-- messages -->
             <div class="-m-2">
-                <div class="p-2">
+                <!-- <div class="p-2">
                   <div class="inline-flex items-center bg-white leading-none text-pink-600 rounded-full p-2 shadow text-teal text-sm">
                     <span class="inline-flex bg-pink-600 text-white rounded-full h-6 px-3 justify-center items-center">Pink</span>
                     <span class="inline-flex px-2">Donec sit amet neque risus. Pellentesque leo mauris, dictum et ligula in.</span>
                   </div>
-                </div>
+                </div> -->
                 
-                <div class="p-2">
-                  <div class="inline-flex items-center bg-white leading-none text-purple-600 rounded-full p-2 shadow text-sm">
+                <div class="p-2" id="message">
+                  <!-- <div class="flex mt-5 items-center bg-white leading-none text-purple-600 rounded-full p-2 shadow text-sm">
                     <span class="inline-flex bg-purple-600 text-white rounded-full h-6 px-3 justify-center items-center text-">Purple</span>
-                    <span class="inline-flex px-2">Aliquam condimentu Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas deleniti cum voluptate nostrum dolorem quaerat voluptates possimus, quis dicta aspernatur nam deserunt pariatur voluptatem. Reprehenderit et magni adipisci laborum iste!m, odio ac finibus fermentum neque risus.</span>
+                    <span class="inline-flex px-2">Aliquam condimentu Lorem ipsu</span>
                   </div>
+
+                  <div class="flex mt-5 items-center bg-white leading-none text-purple-600 rounded-full p-2 shadow text-sm">
+                    <span class="inline-flex bg-purple-600 text-white rounded-full h-6 px-3 justify-center items-center text-">Purple</span>
+                    <span class="inline-flex px-2">Aliquam condimentu Lorem ipsu</span>
+                  </div>
+
+                  <div class="flex mt-5 items-center bg-white leading-none text-purple-600 rounded-full p-2 shadow text-sm">
+                    <span class="inline-flex bg-purple-600 text-white rounded-full h-6 px-3 justify-center items-center text-">Purple</span>
+                    <span class="inline-flex px-2">Aliquam condimentu Lorem ipsu</span>
+                  </div> -->
                 </div>
                 
             </div>
 
-            <div class="div mt-10 grid  grid-cols-3 gap-1">
-                <div class=" col-span-2">
-                    <input class="shadow appearance-none border rounded py-2 px-3 text-grey-darker  w-full" type="text" placeholder="Type your message here">
+            <!-- form message -->
+            <div class="mt-10 grid col-gap-1 grid-cols-12">
+                <div class="col-span-6 sm:col-span-6 lg:col-span-3 mt-2">
+                  <input class="shadow appearance-none border rounded py-2 px-3 text-grey-darker w-full" id="chatUser" type="text" placeholder="User name">
                 </div>
-                <div class=" col-span-1">
-                    <input class="shadow appearance-none border rounded py-2 px-3 text-grey-darker" type="text" placeholder="User name">
+                <div class="col-span-12 sm:col-span-12 lg:col-span-7 mt-2">
+                  <input class="shadow appearance-none border rounded py-2 px-3 text-grey-darker  w-full" id="chatMessage" type="text" placeholder="Type your message here">
+                </div>
+                <div class="col-span-6 sm:col-span-6 lg:col-span-2 mt-2">
+                    <button class="ml-1 cursor-pointer bg-teal-600 hover:bg-teal-500 text-teal-100 py-2 px-4 rounded inline-flex items-center" id="chatBtn">
+                      <img class="w-4 h-4 mr-2" src="https://image.flaticon.com/icons/svg/941/941565.svg"  alt="send">
+                      <span>Send</span>
+                    </button>
                 </div>
             </div>
         </div>
